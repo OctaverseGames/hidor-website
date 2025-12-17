@@ -13,7 +13,7 @@ export default function Portal() {
         transition={{ duration: 0.8 }}
         className="max-w-3xl space-y-10 text-center"
       >
-        <h1 className="text-5xl font-bold tracking-wide">Welcome to HIDOR</h1>
+        <h1 className="text-5xl font-bold tracking-wide animate-glow">Welcome to HIDOR</h1>
         <p className="text-white/60 leading-relaxed">
           HIDOR is a research-first confidential Proof-of-Stake network. Learn about the protocol, cryptography, and staking mechanisms before interacting with the client.
         </p>
@@ -25,7 +25,7 @@ export default function Portal() {
             Launch Wallet (Experimental)
           </Button>
         </div>
-        <Card>
+        <Card className="hover:animate-cardGlow transition-all duration-300">
           <CardContent>
             This portal is a quiet gateway to HIDOR’s protocol research. Wallet functionality will be available once the experimental client is ready for use.
           </CardContent>
