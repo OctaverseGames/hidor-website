@@ -6,10 +6,10 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function Home() {
   return (
-    <div className="bg-black text-white px-6 lg:px-24 py-20 space-y-32">
+    <div className="bg-black text-white overflow-x-hidden">
 
       {/* HERO */}
-      <section className="flex flex-col items-center text-center space-y-10">
+      <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 lg:px-24 space-y-10">
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -18,16 +18,14 @@ export default function Home() {
         >
           HIDOR
         </motion.h1>
-
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
           className="text-xl text-white/70 max-w-3xl"
         >
-          A confidential Proof-of-Stake blockchain designed for private value transfer, private staking, and anonymous governance.
+          Private Proof-of-Stake Blockchain. Secure, fast, and privacy-first.
         </motion.p>
-
         <div className="flex gap-6">
           <Button onClick={() => (window.location.href = "/portal")}>
             Enter Network
@@ -38,51 +36,87 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FEATURE CARDS */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center mt-16">
-        <Card className="hover:animate-cardGlow transition-all duration-300">
+      {/* FEATURES */}
+      <section className="max-w-6xl mx-auto mt-32 px-6 lg:px-0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <Card>
           <CardContent>
-            <div className="text-4xl mb-4">🛡️</div>
-            <h2 className="text-2xl font-semibold mb-2">Private Transfers</h2>
-            <p>
-              Sender, receiver, and amount are completely private using stealth addresses and zero-knowledge proofs.
-            </p>
+            <div className="text-5xl mb-4">🛡️</div>
+            <h3 className="text-2xl font-semibold mb-2">Private Transfers</h3>
+            <p>Sender, receiver, and amount remain confidential via zero-knowledge proofs.</p>
           </CardContent>
         </Card>
 
-        <Card className="hover:animate-cardGlow transition-all duration-300">
+        <Card>
           <CardContent>
-            <div className="text-4xl mb-4">⚖️</div>
-            <h2 className="text-2xl font-semibold mb-2">Confidential Staking</h2>
-            <p>
-              Validators prove eligibility without revealing stake amounts or sources.
-            </p>
+            <div className="text-5xl mb-4">⚖️</div>
+            <h3 className="text-2xl font-semibold mb-2">Confidential Staking</h3>
+            <p>Validators prove eligibility without revealing stake size or source.</p>
           </CardContent>
         </Card>
 
-        <Card className="hover:animate-cardGlow transition-all duration-300">
+        <Card>
           <CardContent>
-            <div className="text-4xl mb-4">🗳️</div>
-            <h2 className="text-2xl font-semibold mb-2">Anonymous Governance</h2>
-            <p>
-              Zero-knowledge voting ensures proposals are verifiable while keeping voter identities private.
-            </p>
+            <div className="text-5xl mb-4">🗳️</div>
+            <h3 className="text-2xl font-semibold mb-2">Anonymous Governance</h3>
+            <p>Stake-weighted votes in zero knowledge ensure privacy of participants.</p>
+          </CardContent>
+        </Card>
+
+        <Card>
+          <CardContent>
+            <div className="text-5xl mb-4">🚀</div>
+            <h3 className="text-2xl font-semibold mb-2">Fast Transactions</h3>
+            <p>Optimized for speed and minimal metadata leakage for real-time transfers.</p>
           </CardContent>
         </Card>
       </section>
 
+      {/* ECOSYSTEM */}
+      <section className="max-w-6xl mx-auto mt-32 px-6 lg:px-0">
+        <h2 className="text-4xl font-bold mb-10 text-center animate-glow">Ecosystem & Use Cases</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <Card>
+            <CardContent>
+              <h3 className="text-xl font-semibold mb-2">Wallets</h3>
+              <p>Private wallet clients for staking and confidential transfers.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent>
+              <h3 className="text-xl font-semibold mb-2">Staking Clients</h3>
+              <p>Validator tools to participate in PoS while preserving anonymity.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent>
+              <h3 className="text-xl font-semibold mb-2">Governance Tools</h3>
+              <p>Anonymous voting platform for network proposals and updates.</p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent>
+              <h3 className="text-xl font-semibold mb-2">Developer SDK</h3>
+              <p>APIs and libraries for building private applications on HIDOR.</p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="text-center space-y-8 mt-16">
-        <p className="text-white/60 text-lg">
+      <section className="text-center mt-32 mb-20 px-6 lg:px-0">
+        <p className="text-white/60 text-lg mb-6">
           HIDOR is under active research and development. Specifications may evolve as cryptographic assumptions are formally validated.
         </p>
         <Button onClick={() => (window.location.href = "/docs")}>
-          Explore Full Specification
+          Explore Full Protocol
         </Button>
       </section>
 
       {/* FOOTER */}
-      <footer className="pt-20 border-t border-white/10 text-center text-white/40 text-sm">
+      <footer className="pt-20 border-t border-white/10 text-center text-white/40 text-sm mb-10">
         <p>© 2025 HIDOR Protocol</p>
         <p className="mt-2">Confidential Proof-of-Stake · Research-Driven · Privacy-First</p>
       </footer>
