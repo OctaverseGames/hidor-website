@@ -1,7 +1,5 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
-
 export default function Docs() {
   return (
     <div className="min-h-screen bg-black text-white px-6 py-20 flex justify-center">
