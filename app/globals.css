@@ -23,7 +23,7 @@
 }
 .button-underline:hover::after { width: 100%; }
 
-/* White gradient cards */
+/* White gradient cards on black background */
 @keyframes borderGradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -31,9 +31,9 @@
 }
 
 .card-neon {
-  border-radius: 1rem;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem; /* rounded-2xl */
+  background: #000; /* fully black */
+  border: 1px solid rgba(255,255,255,0.2); /* white border */
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
@@ -47,7 +47,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(270deg, #fff, #ccc, #fff, #ccc);
+  background: linear-gradient(270deg, #fff, #ccc, #fff, #ccc); /* white gradient border */
   background-size: 600% 600%;
   z-index: -1;
   filter: blur(12px);
