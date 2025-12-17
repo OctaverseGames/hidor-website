@@ -13,36 +13,21 @@ export default function Portal() {
         transition={{ duration: 0.8 }}
         className="max-w-3xl space-y-10 text-center"
       >
-        <h1 className="text-5xl font-bold tracking-wide">
-          Welcome to HIDOR
-        </h1>
-
+        <h1 className="text-5xl font-bold tracking-wide">Welcome to HIDOR</h1>
         <p className="text-white/60 leading-relaxed">
-          HIDOR is a research-first confidential Proof-of-Stake network.
-          Learn about the protocol before interacting with the client.
+          HIDOR is a research-first confidential Proof-of-Stake network. Learn about the protocol, cryptography, and staking mechanisms before interacting with the client.
         </p>
-
         <div className="flex justify-center gap-6">
-          <Button
-            className="px-8 py-6 text-lg rounded-2xl"
-            onClick={() => (window.location.href = "/docs")}
-          >
+          <Button onClick={() => (window.location.href = "/docs")}>
             Read Full Protocol
           </Button>
-
-          <Button
-            variant="outline"
-            className="px-8 py-6 text-lg rounded-2xl"
-            disabled
-          >
+          <Button variant="outline" disabled>
             Launch Wallet (Experimental)
           </Button>
         </div>
-
-        <Card className="bg-white/5 border-white/10 max-w-xl mx-auto rounded-2xl shadow-2xl">
-          <CardContent className="p-6 text-sm text-white/70">
-            Wallet functionality will be available once the experimental
-            client is ready.
+        <Card>
+          <CardContent>
+            This portal is a quiet gateway to HIDOR’s protocol research. Wallet functionality will be available once the experimental client is ready for use.
           </CardContent>
         </Card>
       </motion.div>

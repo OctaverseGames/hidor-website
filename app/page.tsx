@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
 
 export default function Home() {
   return (
@@ -24,23 +25,14 @@ export default function Home() {
           transition={{ delay: 0.4, duration: 1 }}
           className="text-xl text-white/70 max-w-3xl"
         >
-          A confidential Proof-of-Stake blockchain designed for private value
-          transfer, private staking, and anonymous governance.
+          A confidential Proof-of-Stake blockchain designed for private value transfer, private staking, and anonymous governance.
         </motion.p>
 
         <div className="flex gap-6">
-          <Button
-            className="px-12 py-6 text-lg rounded-2xl"
-            onClick={() => (window.location.href = "/portal")}
-          >
+          <Button onClick={() => (window.location.href = "/portal")}>
             Enter Network
           </Button>
-
-          <Button
-            variant="outline"
-            className="px-12 py-6 text-lg rounded-2xl"
-            onClick={() => (window.location.href = "/docs")}
-          >
+          <Button variant="outline" onClick={() => (window.location.href = "/docs")}>
             Read Protocol
           </Button>
         </div>
@@ -49,96 +41,63 @@ export default function Home() {
       {/* INTRO */}
       <section className="max-w-4xl mx-auto text-center space-y-6">
         <p className="text-lg text-white/70">
-          HIDOR is built on the belief that privacy is a prerequisite for
-          decentralization. The network combines cryptographic confidentiality
-          with stake-based security, removing the need for public balances,
-          addresses, or governance identities.
+          HIDOR is built on the belief that privacy is a prerequisite for decentralization. The network combines cryptographic confidentiality with stake-based security, removing the need for public balances, addresses, or governance identities.
         </p>
-
         <p className="text-lg text-white/60">
-          Rather than optimizing for speed or speculation, HIDOR prioritizes
-          correctness, minimal metadata leakage, and long-term protocol
-          resilience.
+          Rather than optimizing for speed or speculation, HIDOR prioritizes correctness, minimal metadata leakage, and long-term protocol resilience.
         </p>
       </section>
 
-      {/* FEATURES */}
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="space-y-4"
-        >
-          <div className="text-4xl">🛡️</div>
-          <h2 className="text-2xl font-semibold">Private Transfers</h2>
-          <p className="text-white/60">
-            Transaction sender, receiver, and amounts are concealed using stealth
-            addressing, confidential commitments, and zero-knowledge proofs.
-          </p>
-        </motion.div>
+      {/* FEATURE CARDS */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center mt-16">
+        <Card>
+          <CardContent>
+            <div className="text-4xl mb-4">🛡️</div>
+            <h2 className="text-2xl font-semibold mb-2">Private Transfers</h2>
+            <p>
+              Sender, receiver, and amount are completely private using stealth addresses and zero-knowledge proofs.
+            </p>
+          </CardContent>
+        </Card>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2, duration: 0.8 }}
-          viewport={{ once: true }}
-          className="space-y-4"
-        >
-          <div className="text-4xl">⚖️</div>
-          <h2 className="text-2xl font-semibold">Confidential Staking</h2>
-          <p className="text-white/60">
-            Validators participate in Proof-of-Stake without revealing stake
-            size or origin. Eligibility is proven cryptographically, not
-            publicly displayed.
-          </p>
-        </motion.div>
+        <Card>
+          <CardContent>
+            <div className="text-4xl mb-4">⚖️</div>
+            <h2 className="text-2xl font-semibold mb-2">Confidential Staking</h2>
+            <p>
+              Validators prove eligibility without revealing stake amounts or sources.
+            </p>
+          </CardContent>
+        </Card>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          viewport={{ once: true }}
-          className="space-y-4"
-        >
-          <div className="text-4xl">🗳️</div>
-          <h2 className="text-2xl font-semibold">Anonymous Governance</h2>
-          <p className="text-white/60">
-            Governance decisions are made through zero-knowledge voting.
-            Proposals are verifiable without exposing voter identities or
-            balances.
-          </p>
-        </motion.div>
+        <Card>
+          <CardContent>
+            <div className="text-4xl mb-4">🗳️</div>
+            <h2 className="text-2xl font-semibold mb-2">Anonymous Governance</h2>
+            <p>
+              Zero-knowledge voting ensures proposals are verifiable while keeping voter identities private.
+            </p>
+          </CardContent>
+        </Card>
       </section>
 
       {/* ARCHITECTURE */}
       <section className="max-w-4xl mx-auto space-y-6 text-center">
         <h2 className="text-4xl font-semibold">Protocol Architecture</h2>
-
         <p className="text-white/70">
-          HIDOR uses a UTXO-based ledger model with mandatory output regeneration.
-          All values exist in shielded form, eliminating balance correlation and
-          address reuse.
+          HIDOR uses a UTXO-based ledger model with mandatory output regeneration. All values exist in shielded form, eliminating balance correlation and address reuse.
         </p>
-
         <p className="text-white/60">
-          Consensus replaces transparent stake disclosure with zero-knowledge
-          eligibility proofs, ensuring security without sacrificing privacy.
+          Consensus replaces transparent stake disclosure with zero-knowledge eligibility proofs, ensuring security without sacrificing privacy.
         </p>
       </section>
 
       {/* CTA */}
       <section className="text-center space-y-8">
         <p className="text-white/60 text-lg">
-          HIDOR is under active research and development. Specifications may
-          evolve as cryptographic assumptions are formally validated.
+          HIDOR is under active research and development. Specifications may evolve as cryptographic assumptions are formally validated.
         </p>
-
-        <Button
-          className="px-14 py-7 text-lg rounded-2xl"
-          onClick={() => (window.location.href = "/docs")}
-        >
+        <Button onClick={() => (window.location.href = "/docs")}>
           Explore Full Specification
         </Button>
       </section>
@@ -146,11 +105,8 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="pt-20 border-t border-white/10 text-center text-white/40 text-sm">
         <p>© 2025 HIDOR Protocol</p>
-        <p className="mt-2">
-          Confidential Proof-of-Stake · Research-Driven · Privacy-First
-        </p>
+        <p className="mt-2">Confidential Proof-of-Stake · Research-Driven · Privacy-First</p>
       </footer>
-
     </div>
   )
 }
