@@ -71,40 +71,6 @@ export default function Home() {
         </Card>
       </section>
 
-      {/* ECOSYSTEM */}
-      <section className="max-w-6xl mx-auto mt-32 px-6 lg:px-0">
-        <h2 className="text-4xl font-bold mb-10 text-center animate-glow">Ecosystem & Use Cases</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <Card>
-            <CardContent>
-              <h3 className="text-xl font-semibold mb-2">Wallets</h3>
-              <p>Private wallet clients for staking and confidential transfers.</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent>
-              <h3 className="text-xl font-semibold mb-2">Staking Clients</h3>
-              <p>Validator tools to participate in PoS while preserving anonymity.</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent>
-              <h3 className="text-xl font-semibold mb-2">Governance Tools</h3>
-              <p>Anonymous voting platform for network proposals and updates.</p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent>
-              <h3 className="text-xl font-semibold mb-2">Developer SDK</h3>
-              <p>APIs and libraries for building private applications on HIDOR.</p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* CTA */}
       <section className="text-center mt-32 mb-20 px-6 lg:px-0">
         <p className="text-white/60 text-lg mb-6">
