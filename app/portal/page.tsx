@@ -6,56 +6,35 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function Portal() {
   return (
-    <div className="bg-black min-h-screen text-white px-6 lg:px-24 py-20 flex flex-col items-center space-y-20">
-
-      <motion.h1
-        initial={{ opacity: 0, y: 24 }}
+    <div className="min-h-screen bg-black text-white px-6 py-20 flex justify-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-6xl font-bold text-center animate-glow"
+        transition={{ duration: 0.8 }}
+        className="max-w-3xl space-y-10 text-center"
       >
-        Welcome to HIDOR Portal
-      </motion.h1>
+        <h1 className="text-5xl font-bold tracking-wide animate-glow">Welcome to HIDOR</h1>
+        <p className="text-white/60 leading-relaxed">
+          HIDOR is a research-first confidential Proof-of-Stake network. Learn about the protocol, cryptography, and staking mechanisms before interacting with the client.
+        </p>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.4, duration: 1 }}
-        className="text-white/70 max-w-3xl text-center"
-      >
-        Explore staking, confidential transactions, and governance mechanisms in a secure environment.
-      </motion.p>
-
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full mt-12">
-        <Card>
-          <CardContent>
-            <h3 className="text-2xl font-semibold mb-2">Research Docs</h3>
-            <p>Comprehensive protocol documentation and cryptography explanations.</p>
-            <Button className="mt-4" onClick={() => (window.location.href = "/docs")}>View Docs</Button>
-          </CardContent>
-        </Card>
+        <div className="flex justify-center gap-6">
+          <Button onClick={() => (window.location.href = "/docs")}>
+            Read Full Protocol
+          </Button>
+          <Button variant="outline" disabled>
+            Launch Wallet (Experimental)
+          </Button>
+        </div>
 
         <Card>
           <CardContent>
-            <h3 className="text-2xl font-semibold mb-2">Validator Tools</h3>
-            <p>Tools for staking, monitoring, and participating anonymously.</p>
-            <Button className="mt-4" disabled>Launch Validator</Button>
+            <p className="text-white/70 text-sm">
+              This portal is a quiet gateway to HIDOR’s protocol research. Wallet functionality will be available once the experimental client is ready for use.
+            </p>
           </CardContent>
         </Card>
-
-        <Card>
-          <CardContent>
-            <h3 className="text-2xl font-semibold mb-2">Experimental Wallet</h3>
-            <p>Interact with the network using our confidential wallet for testing.</p>
-            <Button className="mt-4" disabled>Launch Wallet</Button>
-          </CardContent>
-        </Card>
-      </div>
-
-      <section className="text-center mt-20">
-        <p className="text-white/60 mb-6">All portal features are experimental.</p>
-        <Button onClick={() => (window.location.href = "/docs")}>Explore Full Protocol</Button>
-      </section>
+      </motion.div>
     </div>
   )
 }
