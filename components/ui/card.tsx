@@ -1,7 +1,7 @@
-export function Card({ children, className = "", ...props }: any) {
+export function Card({ children, className = "", color = "from-purple-400 to-blue-400", ...props }: any) {
   return (
     <div
-      className={`bg-black border border-white/20 rounded-2xl text-white p-6 transition-all hover:shadow-[0_0_30px_rgba(255,255,255,0.25)] animate-cardGlow ${className}`}
+      className={`bg-gradient-to-br ${color} text-white rounded-2xl p-6 shadow-lg hover:scale-105 transform transition-all animate-cardGlow ${className}`}
       {...props}
     >
       {children}
