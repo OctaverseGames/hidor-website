@@ -10,7 +10,7 @@ export default function Home() {
 
       {/* HERO */}
       <section className="relative flex flex-col items-center justify-center text-center min-h-screen px-6 lg:px-24 space-y-10">
-        <img src="/logo.jpg" alt="Verity Logo" className="w-32 mx-auto mb-4 animate-glow" />
+        <img src="/logo.png" alt="Verity Logo" className="w-32 mx-auto mb-4 animate-glow" />
         <motion.h1
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
