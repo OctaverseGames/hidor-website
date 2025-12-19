@@ -6,9 +6,9 @@ export default function Docs() {
       <div className="max-w-4xl space-y-12">
 
         <section>
-          <h1 className="text-4xl font-semibold mb-4 animate-glow">HIDOR Protocol</h1>
+          <h1 className="text-4xl font-semibold mb-4 animate-glow">VERITY Protocol</h1>
           <p className="text-white/70 leading-relaxed">
-            HIDOR is a confidential Proof-of-Stake blockchain designed to enable private value transfer, private staking, and anonymous governance. The protocol combines a UTXO-based ledger model with zero-knowledge proofs to conceal transaction graph data while maintaining verifiable consensus.
+            VERITY is a confidential Proof-of-Stake blockchain designed to enable private value transfer, private staking, and anonymous governance. The protocol combines a UTXO-based ledger model with zero-knowledge proofs to conceal transaction graph data while maintaining verifiable consensus.
           </p>
         </section>
 
@@ -26,7 +26,7 @@ export default function Docs() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">2. Ledger Model</h2>
           <p className="text-white/70 leading-relaxed">
-            HIDOR employs a UTXO-based ledger with mandatory output regeneration. All value transfers consume existing outputs and create fresh outputs, preventing address reuse and balance correlation. Transaction amounts are hidden using commitment schemes with range proofs.
+            VERITY employs a UTXO-based ledger with mandatory output regeneration. All value transfers consume existing outputs and create fresh outputs, preventing address reuse and balance correlation. Transaction amounts are hidden using commitment schemes with range proofs.
           </p>
         </section>
 
@@ -40,14 +40,14 @@ export default function Docs() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">4. Consensus Overview</h2>
           <p className="text-white/70 leading-relaxed">
-            HIDOR replaces public stake disclosure with a zero-knowledge Proof-of-Stake mechanism. Validators lock stake into a shielded pool and produce cryptographic proofs asserting eligibility to propose or attest blocks without revealing stake size or source.
+            VERITY replaces public stake disclosure with a zero-knowledge Proof-of-Stake mechanism. Validators lock stake into a shielded pool and produce cryptographic proofs asserting eligibility to propose or attest blocks without revealing stake size or source.
           </p>
         </section>
 
         <section>
           <h2 className="text-2xl font-semibold mb-3">5. Native Asset</h2>
           <p className="text-white/70 leading-relaxed">
-            The native asset of the HIDOR network is HIDOR (ticker: HID). The asset is used for transaction fees, validator staking, and protocol-level incentives. All balances exist exclusively in shielded form.
+            The native asset of the VERITY network is VERITY (ticker: VTY). The asset is used for transaction fees, validator staking, and protocol-level incentives. All balances exist exclusively in shielded form.
           </p>
         </section>
 
@@ -61,7 +61,7 @@ export default function Docs() {
         <section>
           <h2 className="text-2xl font-semibold mb-3">7. Status</h2>
           <p className="text-white/60 leading-relaxed">
-            The HIDOR protocol is under active research and development. Specifications are subject to change as cryptographic and consensus mechanisms are formally validated.
+            The VERITY protocol is under active research and development. Specifications are subject to change as cryptographic and consensus mechanisms are formally validated.
           </p>
         </section>
 

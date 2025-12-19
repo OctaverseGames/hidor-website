@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'hidor-neon': '#0ff', // neon accent color
+        'verity-neon': '#0ff', // neon accent color
       },
       keyframes: {
         glow: {

@@ -1,5 +1,5 @@
 {
-  "name": "hidor-website",
+  "name": "verity-website",
   "private": true,
   "scripts": {
     "dev": "next dev",

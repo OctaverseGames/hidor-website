@@ -1,78 +1,29 @@
-/* Tailwind base imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* -------------------------------
-   TITLE GLOW ANIMATION
---------------------------------- */
+/* Title glow */
 @keyframes glow {
-  0%, 100% {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff;
-  }
-  50% {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
-  }
+  0%,100% { text-shadow: 0 0 5px #fff,0 0 10px #fff,0 0 20px #fff; }
+  50% { text-shadow: 0 0 10px #fff,0 0 20px #fff,0 0 30px #fff; }
 }
-.animate-glow {
-  animation: glow 1.5s infinite alternate;
-}
+.animate-glow { animation: glow 1.5s infinite alternate; }
 
-/* -------------------------------
-   CARD GLOW ANIMATION
---------------------------------- */
+/* Card glow */
 @keyframes cardGlow {
-  0%, 100% { box-shadow: 0 0 10px rgba(255,255,255,0.05); }
-  50%     { box-shadow: 0 0 30px rgba(255,255,255,0.25); }
+  0%,100% { box-shadow: 0 0 10px rgba(255,255,255,0.05); }
+  50% { box-shadow: 0 0 30px rgba(255,255,255,0.25); }
 }
-.animate-cardGlow {
-  animation: cardGlow 2s ease-in-out infinite;
-}
+.animate-cardGlow { animation: cardGlow 2s ease-in-out infinite; }
 
-/* -------------------------------
-   BUTTON NEON UNDERLINE EFFECT
---------------------------------- */
-.button-underline {
-  position: relative;
-  overflow: hidden;
-}
-
+/* Button neon underline */
+.button-underline { position: relative; overflow: hidden; }
 .button-underline::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-  background: #fff;
-  transition: width 0.3s ease;
+  content:""; position:absolute; width:0%; height:2px; left:0; bottom:0; background:#fff; transition:width 0.3s ease;
 }
+.button-underline:hover::after { width:100%; }
 
-.button-underline:hover::after {
-  width: 100%;
-}
-
-/* -------------------------------
-   OPTIONAL: BODY & LINK STYLING
---------------------------------- */
-body {
-  background-color: #000; /* black background for site */
-  color: #fff;           /* default white text */
-  font-family: 'Inter', sans-serif;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* -------------------------------
-   OPTIONAL: SMOOTH TRANSITIONS
---------------------------------- */
-* {
-  transition: all 0.2s ease-in-out;
-}
+body { background-color:#000; color:#fff; font-family:'Inter', sans-serif; }
+a { color:#fff; text-decoration:none; }
+a:hover { text-decoration:underline; }
+* { transition: all 0.2s ease-in-out; }

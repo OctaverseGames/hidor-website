@@ -1,7 +1,7 @@
 import "./globals.css"
 
 export const metadata = {
-  title: "HIDOR",
+  title: "VERITY",
   description: "Confidential Proof-of-Stake blockchain",
 }
 
